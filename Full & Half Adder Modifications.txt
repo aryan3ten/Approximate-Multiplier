@@ -1,0 +1,31 @@
+/half_adder HA1_1 (pp0[1], pp1[0],          s1_1,  c1_1);   // col 1
+    //dpg HA1_1 (.A(pp0[1]),.B(pp1[0]),.C(0),.D(0),.Q(s1_1),.S(c1_1));
+       dkg HA1_1(.A(0), .B(0), .C(pp0[1]),.D(pp1[0]), .S(s1_1), .R(c1_1));
+    
+    
+    //full_adder FA1_2 (pp0[2], pp1[1], pp2[0],  s1_2,  c1_2);   // col 2
+   // tsg FA1_2(.A(pp0[2]),.B(pp1[1]), .C(0), .D(pp2[0]),.R(s1_2), .S(c1_2));
+   // mkg FA1_2();
+   dpg FA1_2 (.A(pp0[2]),.B(pp1[1]),.C(0),.D(pp2[0]),.Q(s1_2),.S(c1_2));
+   
+    //full_adder FA1_3 (pp0[3], pp1[2], pp2[1],  s1_3,  c1_3);   // col 3
+   // tsg FA1_3(.A(pp0[3]),.B(pp1[2]), .C(0), .D(pp2[1]),.R(s1_3), .S(c1_3));
+    //mkg FA1_3();
+    dpg FA1_3 (.A(pp0[3]),.B(pp1[2]),.C(0),.D(pp2[1]),.Q(s1_3),.S(c1_3));
+    
+    full_adder FA1_4 (pp0[4], pp1[3], pp2[2],  s1_4,  c1_4);   // col 4
+   // dpg FA1_4  (.A(pp0[4]),.B(pp1[3]),.C(0),.D(pp2[2]),.Q( s1_4),.S( c1_4));
+    
+    //half_adder HA1_4 (pp3[1], pp4[0],          s1_4b, c1_4b);
+   dpg HA1_4 (.A(pp3[1]),.B(pp4[0]),.C(0),.D(0),.Q(s1_4b),.S(c1_4b));
+    
+    full_adder FA1_5 (pp0[5], pp1[4], pp2[3],  s1_5,  c1_5);   // col 5
+    //dpg FA1_5 (.A(pp0[5]),.B(pp1[4]),.C(0),.D(pp2[3]),.Q( s1_5),.S( c1_5));
+    
+    full_adder FA1_5b(pp3[2], pp4[1], pp5[0],  s1_5b, c1_5b);
+    //dpg FA1_5b (.A(pp3[2]),.B(pp4[1]),.C(0),.D(pp5[0]),.Q( s1_5b),.S( c1_5b))
+
+
+
+
+baaki tum dkg,mtsg,mkg
